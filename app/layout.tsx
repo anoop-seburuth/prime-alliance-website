@@ -12,9 +12,77 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteName = process.env.NEXT_PUBLIC_SITE_NAME || "Prime Alliance";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://primealliance.mu";
+const siteDescription = process.env.NEXT_PUBLIC_SITE_DESCRIPTION || "Premium Import & Distribution Excellence";
+
 export const metadata: Metadata = {
-  title: "Milaf Cola | The World's First Date-Based Cola from Saudi Arabia",
-  description: "Sip the magic: Discover refreshing Milaf Cola made with premium dates from Al-Madinah. A healthier cola alternative with no artificial sweeteners.",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: `${siteName} | Premium Import & Distribution Excellence`,
+    template: `%s | ${siteName}`
+  },
+  description: "Prime Alliance specializes in importing and distributing premium international products, featuring Milaf Cola - the world's first date-based cola from Saudi Arabia.",
+  keywords: [
+    "import distribution",
+    "premium products",
+    "Milaf Cola",
+    "international trading",
+    "Mauritius distribution",
+    "Saudi Arabia products",
+    "date-based cola",
+    "Prime Alliance",
+    "global sourcing",
+    "distribution network"
+  ],
+  authors: [{ name: "Prime Alliance" }],
+  creator: "Prime Alliance",
+  publisher: "Prime Alliance",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: siteUrl,
+    siteName: siteName,
+    title: `${siteName} | Premium Import & Distribution Excellence`,
+    description: siteDescription,
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: `${siteName} - Premium Import & Distribution Excellence`,
+      }
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${siteName} | Premium Import & Distribution Excellence`,
+    description: siteDescription,
+    images: ["/twitter-image.png"],
+    creator: "@primealliance",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: process.env.GOOGLE_SITE_VERIFICATION,
+  },
+  alternates: {
+    canonical: siteUrl,
+  },
 };
 
 export default function RootLayout({

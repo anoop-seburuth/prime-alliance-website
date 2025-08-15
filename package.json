@@ -1,12 +1,25 @@
 {
-  "name": "prime-landing",
-  "version": "0.1.0",
+  "name": "prime-alliance-website",
+  "version": "1.0.0",
   "private": true,
+  "description": "Prime Alliance - Premium Import & Distribution Company Website",
+  "author": "Prime Alliance <info@primealliance.mu>",
+  "homepage": "https://primealliance.mu",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anoop-seburuth/prime-alliance-website.git"
+  },
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf .next out",
+    "export": "next build && next export",
+    "analyze": "ANALYZE=true npm run build",
+    "preview": "npm run build && npm run start"
   },
   "dependencies": {
     "react": "19.1.0",
