@@ -99,8 +99,8 @@ export default function Newsletter() {
                 outline: 'none',
                 boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
               }}
-              onFocus={(e) => e.target.style.boxShadow = '0 0 0 3px rgba(255,255,255,0.3)'}
-              onBlur={(e) => e.target.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)'}
+              onFocus={(e) => (e.target as HTMLElement).style.boxShadow = '0 0 0 3px rgba(255,255,255,0.3)'}
+              onBlur={(e) => (e.target as HTMLElement).style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)'}
               required
             />
             <button

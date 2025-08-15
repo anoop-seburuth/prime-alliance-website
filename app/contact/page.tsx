@@ -121,8 +121,8 @@ export default function ContactPage() {
                       color: 'var(--text-primary)',
                       transition: 'border-color 0.2s ease'
                     }}
-                    onFocus={(e) => e.target.style.borderColor = 'var(--milaf-green)'}
-                    onBlur={(e) => e.target.style.borderColor = 'var(--border)'}
+                    onFocus={(e) => (e.target as HTMLElement).style.borderColor = 'var(--milaf-green)'}
+                    onBlur={(e) => (e.target as HTMLElement).style.borderColor = 'var(--border)'}
                   />
                 </div>
 
@@ -155,8 +155,8 @@ export default function ContactPage() {
                       color: 'var(--text-primary)',
                       transition: 'border-color 0.2s ease'
                     }}
-                    onFocus={(e) => e.target.style.borderColor = 'var(--milaf-green)'}
-                    onBlur={(e) => e.target.style.borderColor = 'var(--border)'}
+                    onFocus={(e) => (e.target as HTMLElement).style.borderColor = 'var(--milaf-green)'}
+                    onBlur={(e) => (e.target as HTMLElement).style.borderColor = 'var(--border)'}
                   />
                 </div>
 
@@ -189,8 +189,8 @@ export default function ContactPage() {
                       color: 'var(--text-primary)',
                       transition: 'border-color 0.2s ease'
                     }}
-                    onFocus={(e) => e.target.style.borderColor = 'var(--milaf-green)'}
-                    onBlur={(e) => e.target.style.borderColor = 'var(--border)'}
+                    onFocus={(e) => (e.target as HTMLElement).style.borderColor = 'var(--milaf-green)'}
+                    onBlur={(e) => (e.target as HTMLElement).style.borderColor = 'var(--border)'}
                   />
                 </div>
 
@@ -224,8 +224,8 @@ export default function ContactPage() {
                       transition: 'border-color 0.2s ease',
                       lineHeight: '1.6'
                     }}
-                    onFocus={(e) => e.target.style.borderColor = 'var(--milaf-green)'}
-                    onBlur={(e) => e.target.style.borderColor = 'var(--border)'}
+                    onFocus={(e) => (e.target as HTMLElement).style.borderColor = 'var(--milaf-green)'}
+                    onBlur={(e) => (e.target as HTMLElement).style.borderColor = 'var(--border)'}
                   />
                 </div>
 

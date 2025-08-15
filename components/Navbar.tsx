@@ -42,8 +42,8 @@ export default function Navbar() {
                 position: 'relative',
                 transition: 'color 0.2s ease'
               }}
-              onMouseEnter={(e) => e.target.style.color = 'var(--milaf-green)'}
-              onMouseLeave={(e) => e.target.style.color = 'var(--text-secondary)'}
+              onMouseEnter={(e) => (e.target as HTMLElement).style.color = 'var(--milaf-green)'}
+              onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'var(--text-secondary)'}
             >
               Home
             </Link>
@@ -57,8 +57,8 @@ export default function Navbar() {
                 textDecoration: 'none',
                 transition: 'color 0.2s ease'
               }}
-              onMouseEnter={(e) => e.target.style.color = 'var(--milaf-green)'}
-              onMouseLeave={(e) => e.target.style.color = 'var(--text-secondary)'}
+              onMouseEnter={(e) => (e.target as HTMLElement).style.color = 'var(--milaf-green)'}
+              onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'var(--text-secondary)'}
             >
               Products
             </Link>
@@ -72,8 +72,8 @@ export default function Navbar() {
                 textDecoration: 'none',
                 transition: 'color 0.2s ease'
               }}
-              onMouseEnter={(e) => e.target.style.color = 'var(--milaf-green)'}
-              onMouseLeave={(e) => e.target.style.color = 'var(--text-secondary)'}
+              onMouseEnter={(e) => (e.target as HTMLElement).style.color = 'var(--milaf-green)'}
+              onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'var(--text-secondary)'}
             >
               About
             </Link>
@@ -87,8 +87,8 @@ export default function Navbar() {
                 textDecoration: 'none',
                 transition: 'color 0.2s ease'
               }}
-              onMouseEnter={(e) => e.target.style.color = 'var(--milaf-green)'}
-              onMouseLeave={(e) => e.target.style.color = 'var(--text-secondary)'}
+              onMouseEnter={(e) => (e.target as HTMLElement).style.color = 'var(--milaf-green)'}
+              onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'var(--text-secondary)'}
             >
               Contact
             </Link>
