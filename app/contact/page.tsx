@@ -290,8 +290,8 @@ export default function ContactPage() {
                       <a 
                         href="tel:+1234567890" 
                         style={{ color: 'var(--text-secondary)', textDecoration: 'none' }}
-                        onMouseEnter={(e) => e.target.style.color = 'var(--milaf-green)'}
-                        onMouseLeave={(e) => e.target.style.color = 'var(--text-secondary)'}
+                        onMouseEnter={(e) => (e.target as HTMLElement).style.color = 'var(--milaf-green)'}
+                        onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'var(--text-secondary)'}
                       >
                         +1 (234) 567-890
                       </a>
@@ -304,8 +304,8 @@ export default function ContactPage() {
                       <a 
                         href="mailto:info@primealliance.mu" 
                         style={{ color: 'var(--text-secondary)', textDecoration: 'none' }}
-                        onMouseEnter={(e) => e.target.style.color = 'var(--milaf-green)'}
-                        onMouseLeave={(e) => e.target.style.color = 'var(--text-secondary)'}
+                        onMouseEnter={(e) => (e.target as HTMLElement).style.color = 'var(--milaf-green)'}
+                        onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'var(--text-secondary)'}
                       >
                         info@primealliance.mu
                       </a>
@@ -367,8 +367,8 @@ export default function ContactPage() {
                     <a 
                       href="mailto:partnerships@primealliance.mu" 
                       style={{ color: 'var(--text-secondary)', textDecoration: 'none' }}
-                      onMouseEnter={(e) => e.target.style.color = 'var(--milaf-green)'}
-                      onMouseLeave={(e) => e.target.style.color = 'var(--text-secondary)'}
+                      onMouseEnter={(e) => (e.target as HTMLElement).style.color = 'var(--milaf-green)'}
+                      onMouseLeave={(e) => (e.target as HTMLElement).style.color = 'var(--text-secondary)'}
                     >
                       partnerships@primealliance.mu
                     </a>
