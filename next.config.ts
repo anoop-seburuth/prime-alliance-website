@@ -1,11 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Enable static exports for better performance
-  output: 'export',
-  trailingSlash: true,
-  
-  // Image optimization
+  // Image optimization for external domains
   images: {
     unoptimized: true,
     domains: [
@@ -17,13 +13,12 @@ const nextConfig: NextConfig = {
   // Compression and performance
   compress: true,
   
-  // PWA and performance optimizations
+  // Simple experimental features
   experimental: {
-    optimizeCss: true,
     optimizePackageImports: ['lucide-react'],
   },
   
-  // Headers for security and caching
+  // Headers for security and caching  
   async headers() {
     return [
       {
