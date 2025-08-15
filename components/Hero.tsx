@@ -85,7 +85,7 @@ export default function Hero() {
               }}
             >
               <span style={{ fontWeight: '600', color: 'white' }}>Bringing exceptional international products</span> to your market. 
-              <span style={{ fontWeight: '600', color: '#8fb339' }}>Featuring Milaf Cola - the world's first date-based cola from Saudi Arabia.</span>
+              <span style={{ fontWeight: '600', color: '#8fb339' }}>Featuring Milaf Cola - the world&apos;s first date-based cola from Saudi Arabia.</span>
             </p>
 
 

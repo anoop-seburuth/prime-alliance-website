@@ -62,7 +62,7 @@ export default function ContactPage() {
                   lineHeight: '1.7'
                 }}
               >
-                Ready to partner with us? Let's discuss how Prime Alliance can bring exceptional international products to your market.
+                Ready to partner with us? Let&apos;s discuss how Prime Alliance can bring exceptional international products to your market.
               </p>
             </div>
           </div>

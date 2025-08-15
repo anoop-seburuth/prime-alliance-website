@@ -137,7 +137,7 @@ export default function Newsletter() {
                   margin: 0
                 }}
               >
-                ✓ Thank you for your interest! We'll be in touch with partnership opportunities and updates.
+                ✓ Thank you for your interest! We&apos;ll be in touch with partnership opportunities and updates.
               </p>
             </div>
           )}

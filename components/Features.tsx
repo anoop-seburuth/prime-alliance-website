@@ -300,7 +300,7 @@ export default function Features() {
                     marginBottom: 'var(--space-sm)'
                   }}
                 >
-                  "We don't just distribute products – we build bridges between cultures and markets."
+                  &quot;We don&apos;t just distribute products – we build bridges between cultures and markets.&quot;
                 </p>
                 <footer 
                   style={{
