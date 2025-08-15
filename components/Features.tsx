@@ -327,9 +327,9 @@ export default function Features() {
         }}
       >
         <div className="container">
-          <div className="text-center fade-in" style={{ marginBottom: 'var(--space-6xl)' }}>
+          <div className="text-center scale-in" style={{ marginBottom: 'var(--space-6xl)' }}>
             <div 
-              className="inline-block mb-6 px-6 py-3"
+              className="inline-block mb-6 px-6 py-3 bounce-in"
               style={{
                 fontSize: 'var(--font-size-xl)',
                 fontWeight: '700',
@@ -343,7 +343,7 @@ export default function Features() {
               OUR VALUES
             </div>
             <h2 
-              className="font-bold text-balance mb-6"
+              className="font-bold text-balance mb-6 slide-up"
               style={{
                 fontSize: 'var(--font-size-5xl)',
                 color: 'var(--text-primary)',
@@ -354,7 +354,7 @@ export default function Features() {
               Why Choose Prime Alliance?
             </h2>
             <p 
-              className="text-balance mx-auto text-center"
+              className="text-balance mx-auto text-center fade-in-delay"
               style={{
                 fontSize: 'var(--font-size-xl)',
                 color: 'var(--text-primary)',
@@ -370,149 +370,177 @@ export default function Features() {
           </div>
 
           <div 
-            className="grid lg:grid-cols-4 md:grid-cols-2 fade-in-delay"
+            className="grid grid-cols-1 fade-in-slow"
             style={{
-              gap: 'var(--space-2xl)'
+              gap: 'var(--space-6xl)',
+              maxWidth: '1200px',
+              margin: '0 auto'
             }}
           >
-            <div className="text-center card" style={{ padding: 'var(--space-xl)' }}>
-              <div 
-                className="flex items-center justify-center mx-auto mb-4"
-                style={{
-                  width: '80px',
-                  height: '80px',
-                  background: 'linear-gradient(135deg, var(--milaf-light-green), var(--milaf-green))',
-                  borderRadius: '50%',
-                  marginBottom: 'var(--space-lg)'
-                }}
-              >
-                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
+            {/* Quality Assured */}
+            <div className="flex flex-col lg:flex-row items-center lg:items-start group slide-in-left" style={{ gap: 'var(--space-4xl)' }}>
+              <div className="relative flex-shrink-0">
+                <img 
+                  src="https://images.unsplash.com/photo-1606857521015-7f9fcf423740?w=600&h=450&fit=crop&q=90"
+                  alt="Quality Control Excellence"
+                  className="object-cover rounded-3xl group-hover:scale-[1.02] transition-transform duration-500 float"
+                  style={{ 
+                    width: '280px',
+                    height: '200px',
+                    boxShadow: '0 25px 50px rgba(45, 80, 22, 0.15)',
+                    filter: 'brightness(1.05) contrast(1.1)'
+                  }}
+                />
+                <div 
+                  className="absolute -bottom-4 -right-4 w-16 h-16 rounded-2xl flex items-center justify-center pulse-glow"
+                  style={{ 
+                    background: 'linear-gradient(135deg, var(--milaf-green), #1a2e0a)',
+                    border: '4px solid white',
+                    boxShadow: '0 10px 25px rgba(0,0,0,0.1)'
+                  }}
+                >
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4" />
+                  </svg>
+                </div>
               </div>
-              <h3 
-                className="font-semibold mb-3"
-                style={{
-                  fontSize: 'var(--font-size-xl)',
-                  color: 'var(--text-primary)'
-                }}
-              >
-                Quality Assured
-              </h3>
-              <p 
-                style={{
-                  fontSize: 'var(--font-size-base)',
-                  color: 'var(--text-secondary)',
-                  lineHeight: '1.6'
-                }}
-              >
-                Rigorous quality control and authentic product sourcing
-              </p>
+              <div className="flex-1 text-center lg:text-left">
+                <h3 
+                  className="font-black mb-4 rotate-in"
+                  style={{
+                    fontSize: 'clamp(var(--font-size-3xl), 4vw, var(--font-size-4xl))',
+                    color: 'var(--text-primary)',
+                    lineHeight: '1.1',
+                    letterSpacing: '-0.02em'
+                  }}
+                >
+                  QUALITY ASSURED
+                </h3>
+                <p 
+                  style={{
+                    fontSize: 'clamp(var(--font-size-lg), 2vw, var(--font-size-xl))',
+                    color: 'var(--text-secondary)',
+                    lineHeight: '1.6',
+                    marginBottom: 'var(--space-lg)',
+                    fontWeight: '400',
+                    maxWidth: '600px',
+                    margin: '0 auto 0 0'
+                  }}
+                >
+                  Rigorous quality control systems and authentic product sourcing with internationally certified standards. Every product undergoes comprehensive testing to ensure premium quality and consumer safety.
+                </p>
+              </div>
             </div>
 
-            <div className="text-center card" style={{ padding: 'var(--space-xl)' }}>
-              <div 
-                className="flex items-center justify-center mx-auto mb-4"
-                style={{
-                  width: '80px',
-                  height: '80px',
-                  background: 'linear-gradient(135deg, var(--milaf-light-green), var(--milaf-green))',
-                  borderRadius: '50%',
-                  marginBottom: 'var(--space-lg)'
-                }}
-              >
-                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
-                </svg>
+
+            {/* Reliable Partners */}
+            <div className="flex flex-col lg:flex-row items-center lg:items-start group slide-in-right" style={{ gap: 'var(--space-4xl)' }}>
+              <div className="relative flex-shrink-0">
+                <img 
+                  src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&h=450&fit=crop&q=90"
+                  alt="Strategic Partnership Excellence"
+                  className="object-cover rounded-3xl group-hover:scale-[1.02] transition-transform duration-500 float"
+                  style={{ 
+                    width: '280px',
+                    height: '200px',
+                    boxShadow: '0 25px 50px rgba(45, 80, 22, 0.15)',
+                    filter: 'brightness(1.05) contrast(1.1)'
+                  }}
+                />
+                <div 
+                  className="absolute -bottom-4 -right-4 w-16 h-16 rounded-2xl flex items-center justify-center pulse-glow"
+                  style={{ 
+                    background: 'linear-gradient(135deg, var(--milaf-green), #1a2e0a)',
+                    border: '4px solid white',
+                    boxShadow: '0 10px 25px rgba(0,0,0,0.1)'
+                  }}
+                >
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </div>
               </div>
-              <h3 
-                className="font-semibold mb-3"
-                style={{
-                  fontSize: 'var(--font-size-xl)',
-                  color: 'var(--text-primary)'
-                }}
-              >
-                Global Reach
-              </h3>
-              <p 
-                style={{
-                  fontSize: 'var(--font-size-base)',
-                  color: 'var(--text-secondary)',
-                  lineHeight: '1.6'
-                }}
-              >
-                Extensive distribution network across multiple markets
-              </p>
+              <div className="flex-1 text-center lg:text-left">
+                <h3 
+                  className="font-black mb-4 rotate-in"
+                  style={{
+                    fontSize: 'clamp(var(--font-size-3xl), 4vw, var(--font-size-4xl))',
+                    color: 'var(--text-primary)',
+                    lineHeight: '1.1',
+                    letterSpacing: '-0.02em'
+                  }}
+                >
+                  RELIABLE PARTNERS
+                </h3>
+                <p 
+                  style={{
+                    fontSize: 'clamp(var(--font-size-lg), 2vw, var(--font-size-xl))',
+                    color: 'var(--text-secondary)',
+                    lineHeight: '1.6',
+                    marginBottom: 'var(--space-lg)',
+                    fontWeight: '400',
+                    maxWidth: '600px',
+                    margin: '0 auto 0 0'
+                  }}
+                >
+                  Long-term trusted relationships with premium suppliers and retail partners worldwide. We build sustainable partnerships that drive mutual success and market growth.
+                </p>
+              </div>
             </div>
 
-            <div className="text-center card" style={{ padding: 'var(--space-xl)' }}>
-              <div 
-                className="flex items-center justify-center mx-auto mb-4"
-                style={{
-                  width: '80px',
-                  height: '80px',
-                  background: 'linear-gradient(135deg, var(--milaf-light-green), var(--milaf-green))',
-                  borderRadius: '50%',
-                  marginBottom: 'var(--space-lg)'
-                }}
-              >
-                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
+            {/* Market Expertise */}
+            <div className="flex flex-col lg:flex-row items-center lg:items-start group slide-in-left" style={{ gap: 'var(--space-4xl)' }}>
+              <div className="relative flex-shrink-0">
+                <img 
+                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=450&fit=crop&q=90"
+                  alt="Market Intelligence and Analytics"
+                  className="object-cover rounded-3xl group-hover:scale-[1.02] transition-transform duration-500 float"
+                  style={{ 
+                    width: '280px',
+                    height: '200px',
+                    boxShadow: '0 25px 50px rgba(45, 80, 22, 0.15)',
+                    filter: 'brightness(1.05) contrast(1.1)'
+                  }}
+                />
+                <div 
+                  className="absolute -bottom-4 -right-4 w-16 h-16 rounded-2xl flex items-center justify-center pulse-glow"
+                  style={{ 
+                    background: 'linear-gradient(135deg, var(--milaf-green), #1a2e0a)',
+                    border: '4px solid white',
+                    boxShadow: '0 10px 25px rgba(0,0,0,0.1)'
+                  }}
+                >
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
+                </div>
               </div>
-              <h3 
-                className="font-semibold mb-3"
-                style={{
-                  fontSize: 'var(--font-size-xl)',
-                  color: 'var(--text-primary)'
-                }}
-              >
-                Reliable Partners
-              </h3>
-              <p 
-                style={{
-                  fontSize: 'var(--font-size-base)',
-                  color: 'var(--text-secondary)',
-                  lineHeight: '1.6'
-                }}
-              >
-                Trusted relationships with suppliers and retailers
-              </p>
-            </div>
-
-            <div className="text-center card" style={{ padding: 'var(--space-xl)' }}>
-              <div 
-                className="flex items-center justify-center mx-auto mb-4"
-                style={{
-                  width: '80px',
-                  height: '80px',
-                  background: 'linear-gradient(135deg, var(--milaf-light-green), var(--milaf-green))',
-                  borderRadius: '50%',
-                  marginBottom: 'var(--space-lg)'
-                }}
-              >
-                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                </svg>
+              <div className="flex-1 text-center lg:text-left">
+                <h3 
+                  className="font-black mb-4 rotate-in"
+                  style={{
+                    fontSize: 'clamp(var(--font-size-3xl), 4vw, var(--font-size-4xl))',
+                    color: 'var(--text-primary)',
+                    lineHeight: '1.1',
+                    letterSpacing: '-0.02em'
+                  }}
+                >
+                  MARKET EXPERTISE
+                </h3>
+                <p 
+                  style={{
+                    fontSize: 'clamp(var(--font-size-lg), 2vw, var(--font-size-xl))',
+                    color: 'var(--text-secondary)',
+                    lineHeight: '1.6',
+                    marginBottom: 'var(--space-lg)',
+                    fontWeight: '400',
+                    maxWidth: '600px',
+                    margin: '0 auto 0 0'
+                  }}
+                >
+                  Deep understanding of consumer trends, market dynamics, and cultural preferences across diverse regions. Data-driven insights guide our strategic distribution decisions.
+                </p>
               </div>
-              <h3 
-                className="font-semibold mb-3"
-                style={{
-                  fontSize: 'var(--font-size-xl)',
-                  color: 'var(--text-primary)'
-                }}
-              >
-                Market Expertise
-              </h3>
-              <p 
-                style={{
-                  fontSize: 'var(--font-size-base)',
-                  color: 'var(--text-secondary)',
-                  lineHeight: '1.6'
-                }}
-              >
-                Deep understanding of consumer preferences and trends
-              </p>
             </div>
           </div>
         </div>
