@@ -62,7 +62,7 @@ export async function POST(request: NextRequest) {
 
     // Email content
     const mailOptions = {
-      from: process.env.EMAIL_FROM || 'noreply@primealliance.mu',
+      from: process.env.EMAIL_FROM || 'orders@primealliance.mu',
       to: 'info@primealliance.mu',
       subject: `Contact Form: ${subject}`,
       text: `
