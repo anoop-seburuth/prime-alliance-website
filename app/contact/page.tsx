@@ -370,11 +370,11 @@ export default function ContactPage() {
                   <div className="space-y-2">
                     <div className="flex justify-between">
                       <span style={{ color: 'var(--text-secondary)' }}>Monday - Friday</span>
-                      <span style={{ color: 'var(--text-primary)', fontWeight: '600' }}>9:00 AM - 6:00 PM</span>
+                      <span style={{ color: 'var(--text-primary)', fontWeight: '600' }}>9:00 AM - 5:00 PM</span>
                     </div>
                     <div className="flex justify-between">
                       <span style={{ color: 'var(--text-secondary)' }}>Saturday</span>
-                      <span style={{ color: 'var(--text-primary)', fontWeight: '600' }}>10:00 AM - 4:00 PM</span>
+                      <span style={{ color: 'var(--text-primary)', fontWeight: '600' }}>9:30 AM - 1:00 PM</span>
                     </div>
                     <div className="flex justify-between">
                       <span style={{ color: 'var(--text-secondary)' }}>Sunday</span>
