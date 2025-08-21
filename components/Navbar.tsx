@@ -32,7 +32,7 @@ export default function Navbar() {
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center" style={{ gap: 'var(--space-3xl)' }}>
             <Link 
-              href="#home" 
+              href="/" 
               className="nav-link"
               style={{ 
                 fontSize: 'var(--font-size-base)',
@@ -48,7 +48,7 @@ export default function Navbar() {
               Home
             </Link>
             <Link 
-              href="#products" 
+              href="/#products" 
               className="nav-link"
               style={{ 
                 fontSize: 'var(--font-size-base)',
@@ -63,7 +63,7 @@ export default function Navbar() {
               Products
             </Link>
             <Link 
-              href="#about" 
+              href="/#about" 
               className="nav-link"
               style={{ 
                 fontSize: 'var(--font-size-base)',
@@ -136,7 +136,7 @@ export default function Navbar() {
           >
             <div className="flex flex-col" style={{ gap: 'var(--space-lg)' }}>
               <Link 
-                href="#home" 
+                href="/" 
                 className="block"
                 style={{ 
                   fontSize: 'var(--font-size-lg)',
@@ -150,7 +150,7 @@ export default function Navbar() {
                 Home
               </Link>
               <Link 
-                href="#products" 
+                href="/#products" 
                 className="block"
                 style={{ 
                   fontSize: 'var(--font-size-lg)',
@@ -164,7 +164,7 @@ export default function Navbar() {
                 Products
               </Link>
               <Link 
-                href="#about" 
+                href="/#about" 
                 className="block"
                 style={{ 
                   fontSize: 'var(--font-size-lg)',
