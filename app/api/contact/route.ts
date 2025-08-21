@@ -23,7 +23,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Create transporter using TurboSMTP
-    const transporter = nodemailer.createTransporter({
+    const transporter = nodemailer.createTransport({
       host: 'pro.turbo-smtp.com',
       port: 587,
       secure: false, // true for 465, false for other ports
