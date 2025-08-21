@@ -93,7 +93,7 @@ export default function ContactPage() {
                   marginBottom: 'var(--space-lg)'
                 }}
               >
-                Get In Touch
+                Contact Us
               </h1>
               <p 
                 className="text-balance fade-in-delay"
