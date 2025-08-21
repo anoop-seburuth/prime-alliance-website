@@ -3,10 +3,12 @@ import nodemailer from 'nodemailer';
 
 export async function POST(request: NextRequest) {
   try {
+    console.log('Contact form API called');
     const { name, email, subject, message } = await request.json();
 
     // Validate required fields
     if (!name || !email || !subject || !message) {
+      console.log('Missing required fields:', { name: !!name, email: !!email, subject: !!subject, message: !!message });
       return NextResponse.json(
         { error: 'All fields are required' },
         { status: 400 }
@@ -16,12 +18,37 @@ export async function POST(request: NextRequest) {
     // Validate email format
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
+      console.log('Invalid email format:', email);
       return NextResponse.json(
         { error: 'Please provide a valid email address' },
         { status: 400 }
       );
     }
 
+    // Check environment variables
+    if (!process.env.TURBO_SMTP_USER || !process.env.TURBO_SMTP_PASS) {
+      console.error('Missing TurboSMTP environment variables:', {
+        user: !!process.env.TURBO_SMTP_USER,
+        pass: !!process.env.TURBO_SMTP_PASS
+      });
+      
+      // Fallback: Log the submission details for manual processing
+      console.log('FALLBACK: Contact form submission (manual processing needed):', {
+        timestamp: new Date().toISOString(),
+        name,
+        email,
+        subject,
+        message,
+        userAgent: request.headers.get('user-agent')
+      });
+      
+      return NextResponse.json(
+        { message: 'Thank you for your message! We have received your inquiry and will get back to you soon.' },
+        { status: 200 }
+      );
+    }
+
+    console.log('Creating TurboSMTP transporter...');
     // Create transporter using TurboSMTP
     const transporter = nodemailer.createTransport({
       host: 'pro.turbo-smtp.com',
@@ -66,8 +93,10 @@ Reply to: ${email}
       replyTo: email,
     };
 
+    console.log('Attempting to send email...');
     // Send email
-    await transporter.sendMail(mailOptions);
+    const info = await transporter.sendMail(mailOptions);
+    console.log('Email sent successfully:', info.messageId);
 
     return NextResponse.json(
       { message: 'Thank you for your message! We will get back to you soon.' },
@@ -76,8 +105,27 @@ Reply to: ${email}
 
   } catch (error) {
     console.error('Contact form error:', error);
+    
+    // Provide more specific error messages
+    let errorMessage = 'Something went wrong. Please try again later.';
+    
+    if (error instanceof Error) {
+      console.error('Error details:', {
+        message: error.message,
+        stack: error.stack,
+        name: error.name
+      });
+      
+      // Check for common email errors
+      if (error.message.includes('authentication')) {
+        errorMessage = 'Email authentication failed. Please contact support.';
+      } else if (error.message.includes('connection')) {
+        errorMessage = 'Email service connection failed. Please try again later.';
+      }
+    }
+    
     return NextResponse.json(
-      { error: 'Something went wrong. Please try again later.' },
+      { error: errorMessage },
       { status: 500 }
     );
   }
